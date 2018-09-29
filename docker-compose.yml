@@ -9,6 +9,8 @@ services:
       - ./conf/www.conf:/usr/local/etc/php-fpm.d/www.conf
       - ./conf/php.ini:/usr/local/etc/php/php.ini
       - ./www:/www/
+      - ./log/php-fpm:/var/log/php-fpm
+      - ./log/nginx:/var/log/nginx
 
   php:
     build:
